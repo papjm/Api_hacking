@@ -1,0 +1,119 @@
+API ENUMERATION:
+tools for api testing:
+1. burp intruder
+2. ffuf
+3. arjun:powerful tool it could tell you what http method and possible parameters to include in your request 
+swagger: some api has a swagger endpoint so be on the lookout for those. it sometimes look like so /_swagger_/
+use seclists to enumerate API you can also use raft small words in seclists
+
+check out payloadsallthething on github
+
+when you have a json file in an api use json beautifier or pretty print json online resources to help you read the json clearly
+if you see a large response come out of an Api call check for information disclosure .
+
+RESTful api do have CRUD functionality: meaning a resource has CREATE, READ, UPDATE, DELETE functionality enabled on that endpoint
+When trying to edit data in an api endpoint , do the following
+1. change the request method to PUT
+2. change the content type to Application/json if the api endpoint returns json type data
+since put http method are not frequently in use : use POST method but on the request body you can add .... method=PUT&other parameters and their values
+
+
+when you find endpoints with the following names, the you most certainly is looking at a graphql API
+qql, graphql,graphiql,graphql/console,gql
+the first step in hacking a graphql api is through introspections(gives us alot of information about the API)
+Graphql structure:
+1. queries = fetches data
+2. mutations = allows data to be edited
+3.Fragments = allows for easy saving of data
+4. metafields = allows for inspection of queries or mutation informations.
+
+check payload all the things github page for payloads on api hacking and other vulnerability classes
+
+
+Tools for Api hacking:
+this tools are used for hacking graphql
+1. graphql voyager
+2. Inql a burp addon and scanner
+3. graph path enum (look it up on github)
+
+Corey J Ball:
+API HACKING NOTES:
+Api top 10 bugs:
+1. information disclosure
+2. Broken Object Level Authorization (BOLA) 
+3. Broken user Authentication
+4. Excessive Data Exposure
+5. Lack of Resources and rate limiting
+6. Broken function level authorization
+7. Mass Assignment
+8.Security Misconfiguration
+9. injection
+10. Improper Assest Management
+11.business logic
+
+TOOLS:
+1. kiterunner to find hidden paths.... run kiterunner by typing "kr" on the command line interface..... when using kiterunner proxy your traffic through burp y --proxy=http://127.0.0.1
+some burp extension include 
+a. authorize for bola (broken object level authorization)
+b. BYPASS WAF
+c. IP ROTATE
+d. inql
+e.Arjun
+f.DNS Dumpster
+e.ProgrammableWeb’s API Search Directory
+ProgrammableWeb (https://www.programmableweb.com) is the go-to source for 
+API-related information. To learn about APIs, you can use its API University. 
+To gather information about your target, use the API directory, a searchable 
+database of over 23,000 APIs (see Figure 6-2). Expect to find API endpoints, 
+version information, business logic information, the status of the API, source 
+code, SDKs, articles, API documentation, and a changelog.
+g.pastehunter (used during recon like gitdorker, but searches pastebin for possible sensitive data exposures)
+h. https://www.exploit-db.com/google-hacking-database
+i. . Other sites with API repositories include https://rapidapi.com and 
+https://apis.guru/browse-apis
+j. shodan.io
+k. kiterunner
+l. https://github.com/hAPI-hacker/Hacking-APIs
+j. jwt_tool (check on github, books.hacktricks.c,com)
+some tools for fuzzing:
+k. https://github.com/fuzzdb-project/fuzzdb
+l. https://github.com/xmendez/wfuzz
+API specification example:
+i used this api specification while reading hacking api book by corey j balls because the spec provided in the book hosted by heroku is no longer valid https://petstore.swagger.io/v2/swagger.json
+use nikto vulnerability scanner as a kind of information gathering tool.
+run the following for a simple scan:      nikto -h https://example.com
+Vulnerable API web apps to practice API hacking:
+OWASP DevSlop’s Pixi:      showing errors cant run github epo says the module is no longer supported
+installation process:
+$ git clone https://github.com/DevSlop/Pixi.git
+$ cd Pixi
+$ sudo docker-compose up
+
+owasp juice shop:
+$ docker pull bkimminich/juice-shop
+$ docker run --rm -p 80:3000 bkimminich/juice-shop
+had an issue running docker pull bkimminich/juice-shop, learnt from chatgpt that its better to rather run it like dock pull docker.io/bkimminich/juice-shop
+or 
+Add the Docker Hub registry to the /etc/containers/registries.conf file. To do this, open the file with a text editor and add the following line:  docker.io
+
+Damn vulnerable graphql application:  (DVGA)
+
+
+
+
+use nikto to scan your target
+nikto -h https://example.com:8000
+
+Begin by searching GitHub for your target organization’s name paired 
+with potentially sensitive types of information, such as “api-key,” “password,” or “token.” Then investigate the various GitHub repository tabs to 
+discover API endpoints and potential weaknesses. Analyze the source code 
+in the Code tab, find software bugs in the Issues tab, and review proposed 
+changes in the Pull requests tab
+
+ATTACKING AUTHENTICATION: 
+For more information about creating targeted password lists, check out the Mentalist app 
+(https://github.com/sc0tfree/mentalist) or the Common User Passwords Profiler 
+(https://github.com/Mebus/cupp)
+
+FUZZING AN API: 
+when api hacking it is important that you fuzz with all kinds of strings, numbers, or special characters even emoji's to ty and force the server into somekind of unintended behaviour
