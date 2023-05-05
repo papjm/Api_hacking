@@ -48,7 +48,10 @@ Api top 10 bugs:
 7. Mass Assignment
 8.Security Misconfiguration
 9. injection
-10. Improper Assest Management
+10. Improper Assest Management: always check changelog of an api documentation to know which bug was fixed and i what version.
+The production version of the sample API is v2, so it would be a good 
+idea to test a few keywords, like v1, v3, test, mobile, uat, dev, and old, as well 
+as any interesting paths discovered during analysis or reconnaissance test
 11.business logic
 
 TOOLS:
@@ -116,4 +119,7 @@ For more information about creating targeted password lists, check out the Ment
 (https://github.com/Mebus/cupp)
 
 FUZZING AN API: 
-when api hacking it is important that you fuzz with all kinds of strings, numbers, or special characters even emoji's to ty and force the server into somekind of unintended behaviour
+when api hacking it is important that you fuzz with all kinds of strings, numbers, or special characters even emoji's to ty and force the server into somekind of unintended behaviour.
+
+
+ EXPLOITING AUTHORIZATION:
