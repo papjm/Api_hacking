@@ -45,7 +45,12 @@ Api top 10 bugs:
 4. Excessive Data Exposure
 5. Lack of Resources and rate limiting
 6. Broken function level authorization
-7. Mass Assignment
+7. Mass Assignment:     
+One of the most common places to discover and exploit mass assignment 
+vulnerabilities is in API requests that accept and process client input
+Remember that if you run into issues with rate limiting, you can use the 
+Arjun —stable option to slow down the scans. This sample scan completed 
+and discovered three valid parameters: user, pass, and admin
 8.Security Misconfiguration
 9. injection
 10. Improper Assest Management: always check changelog of an api documentation to know which bug was fixed and i what version.
@@ -123,3 +128,15 @@ when api hacking it is important that you fuzz with all kinds of strings, number
 
 
  EXPLOITING AUTHORIZATION:
+
+
+
+
+HTTP request methods:
+GET
+PUT
+POST
+PATCH
+OPTIONS
+DELETE
+CONNECT
