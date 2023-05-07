@@ -155,3 +155,19 @@ XAS:
 Another useful XAS tip is to try altering the Content-Type header to 
 induce the API into accepting an HTML payload to spawn the script:
 Content-Type: text/html
+
+Recommended books:
+
+•	 RTFM: Red Team Field Manual (2013) by Ben Clark
+•	 Penetration Testing: A Hands-On Introduction to Hacking (No Starch Press, 
+2014) by Georgia Weidman
+•	 Ethical Hacking: A Hands-On Introduction to Breaking In (No Starch Press, 
+2021) by Daniel Graham
+•	 Advanced Penetration Testing: Hacking the World’s Most Secure Networks
+(Wiley, 2017) by Wil Allsop
+•	 Hands-On Hacking (Wiley, 2020) by Jennifer Arcuri and Matthew Hickey
+•	 The Hacker Playbook 3: Practical Guide to Penetration Testing (Secure Planet, 
+2018) by Peter Kim
+•	 The Shellcoder’s Handbook: Discovering and Exploiting Security Holes (Wiley, 
+2007) by Chris Anley, Felix Lindner, John Heasman, and Gerardo 
+Richarte
