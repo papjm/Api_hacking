@@ -171,3 +171,9 @@ Recommended books:
 •	 The Shellcoder’s Handbook: Discovering and Exploiting Security Holes (Wiley, 
 2007) by Chris Anley, Felix Lindner, John Heasman, and Gerardo 
 Richarte
+In addition to manually analyzing responses, you could use a tool such 
+as W3af, Wafw00f, or Bypass WAF to proactively detect WAFs. Nmap also 
+has a script to help detect WAFs:
+$ nmap -p 80 –script http-waf-detect http://hapihacker.com
+
+
