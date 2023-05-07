@@ -177,3 +177,19 @@ has a script to help detect WAFs:
 $ nmap -p 80 –script http-waf-detect http://hapihacker.com
 
 
+attempt using this strings teminators to bypass WAF:
+%00
+0x00
+//
+;
+%
+!
+?
+[]
+%5B%5D
+%09
+%0a
+%0b
+%0c
+%0e
+
