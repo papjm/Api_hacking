@@ -86,6 +86,9 @@ j. jwt_tool (check on github, books.hacktricks.c,com)
 some tools for fuzzing:
 k. https://github.com/fuzzdb-project/fuzzdb
 l. https://github.com/xmendez/wfuzz
+m. https://github.com/0xInfection/Awesome-WAF great for bypassing WAFS
+n. https://graphql.org/learn
+
 API specification example:
 i used this api specification while reading hacking api book by corey j balls because the spec provided in the book hosted by heroku is no longer valid https://petstore.swagger.io/v2/swagger.json
 use nikto vulnerability scanner as a kind of information gathering tool.
@@ -171,11 +174,11 @@ Recommended books:
 •	 The Shellcoder’s Handbook: Discovering and Exploiting Security Holes (Wiley, 
 2007) by Chris Anley, Felix Lindner, John Heasman, and Gerardo 
 Richarte
+
 In addition to manually analyzing responses, you could use a tool such 
 as W3af, Wafw00f, or Bypass WAF to proactively detect WAFs. Nmap also 
 has a script to help detect WAFs:
 $ nmap -p 80 –script http-waf-detect http://hapihacker.com
-
 
 attempt using this strings teminators to bypass WAF:
 %00
@@ -193,3 +196,5 @@ attempt using this strings teminators to bypass WAF:
 %0c
 %0e
 
+For the most part, the URL encoding has the best chance of being 
+interpreted by the targeted application
