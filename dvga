@@ -1,3 +1,4 @@
 lack of rate limiting
-
 user enumeration  admin password= changeme
+information disclosure: able to see everybodies private paste
+information disclosure using the cmd, able to read system configuration files and app settings etc
