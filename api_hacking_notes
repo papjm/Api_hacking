@@ -89,6 +89,8 @@ l. https://github.com/xmendez/wfuzz
 m. https://github.com/0xInfection/Awesome-WAF great for bypassing WAFS
 n. https://graphql.org/learn
 o. graphw00f (used to detect graphql)
+p. https://github.com/nikitastupin/clairvoyance
+q. https://github.com/dolevf/nmap-graphql-introspection-nse
 
 API specification example:
 i used this api specification while reading hacking api book by corey j balls because the spec provided in the book hosted by heroku is no longer valid https://petstore.swagger.io/v2/swagger.json
